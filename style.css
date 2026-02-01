@@ -1,14 +1,15 @@
-/* --- 1. KODE UTAMA (Berlaku untuk SEMUA perangkat) --- */
+/* --- 1. KODE UTAMA (Dasar) --- */
 * {
-/* Pastikan semua gambar tidak melebihi lebar layar */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Kode Gambar (Sekarang sudah di luar, tidak bertumpuk) */
 img {
     max-width: 100%;
     height: auto;
     display: block;
-}
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
 }
 
 body {
@@ -36,7 +37,8 @@ header {
 
 .header-flex {
     display: flex;
-    justify-content: space-between; /* Membuat Logo di kiri, Menu di kanan */
+    flex-direction: row; /* Memaksa menyamping di laptop */
+    justify-content: space-between; 
     align-items: center;
 }
 
@@ -67,7 +69,7 @@ nav a {
     font-weight: 600;
 }
 
-/* --- 3. HERO SECTION (Kotak Biru Gambar Sekolah) --- */
+/* --- 3. HERO SECTION (Kotak Gambar Sekolah) --- */
 .hero {
     background: url('sekolah.jpg') no-repeat center center/cover;
     min-height: 400px;
@@ -83,38 +85,37 @@ nav a {
     text-align: center;
 }
 
-/* --- 4. KODE KHUSUS HP (Hanya aktif di layar di bawah 768px) --- */
+/* --- 4. KODE KHUSUS HP (Hanya aktif di HP/Layar Kecil) --- */
 @media (max-width: 768px) {
     .header-flex {
-        flex-direction: column; /* Di HP jadi susun atas-bawah */
+        flex-direction: column; /* Menumpuk ke bawah di HP agar tidak nabrak */
         padding: 10px;
         gap: 10px;
     }
 
     .logo-area {
-        flex-direction: row; /* Logo dan Tulisan tetap menyamping kecil */
+        flex-direction: row;
         justify-content: center;
     }
 
     .logo-img {
-        height: 40px;
+        height: 45px; /* Sedikit dikecilkan agar pas di HP */
     }
 
     .brand h1 {
-        font-size: 0.9rem;
+        font-size: 0.95rem;
     }
 
     nav ul {
-        gap: 8px;
+        gap: 10px;
         flex-wrap: wrap;
         justify-content: center;
     }
 
     nav a {
-        font-size: 0.75rem;
+        font-size: 0.8rem;
         background: #f1f1f1;
-        padding: 5px 8px;
+        padding: 6px 10px;
         border-radius: 5px;
     }
 }
-

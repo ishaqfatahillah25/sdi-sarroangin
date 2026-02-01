@@ -1,5 +1,11 @@
 /* --- 1. KODE UTAMA (Berlaku untuk SEMUA perangkat) --- */
 * {
+/* Pastikan semua gambar tidak melebihi lebar layar */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -111,3 +117,4 @@ nav a {
         border-radius: 5px;
     }
 }
+

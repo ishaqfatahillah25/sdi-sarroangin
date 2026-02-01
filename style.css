@@ -5,7 +5,6 @@
     box-sizing: border-box;
 }
 
-/* Kode Gambar (Sekarang sudah di luar, tidak bertumpuk) */
 img {
     max-width: 100%;
     height: auto;
@@ -25,7 +24,7 @@ body {
     max-width: 1200px;
 }
 
-/* --- 2. HEADER UNTUK LAPTOP (Menyamping) --- */
+/* --- 2. HEADER LAPTOP --- */
 header {
     background: #fff;
     padding: 15px 0;
@@ -37,7 +36,6 @@ header {
 
 .header-flex {
     display: flex;
-    flex-direction: row; /* Memaksa menyamping di laptop */
     justify-content: space-between; 
     align-items: center;
 }
@@ -50,11 +48,6 @@ header {
 
 .logo-img {
     height: 60px;
-    width: auto;
-}
-
-.brand h1 {
-    font-size: 1.2rem;
 }
 
 nav ul {
@@ -69,7 +62,23 @@ nav a {
     font-weight: 600;
 }
 
-/* --- 3. HERO SECTION (Kotak Gambar Sekolah) --- */
+/* --- 3. KONTEN (Visi Misi, Foto, Footer) --- */
+/* Pastikan class ini sesuai dengan yang ada di HTML kamu */
+.visi-misi-flex, .guru-flex, .footer-flex {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    margin-bottom: 40px;
+}
+
+.card {
+    flex: 1;
+    padding: 20px;
+    background: #f9f9f9;
+    border-radius: 8px;
+}
+
+/* --- 4. HERO SECTION --- */
 .hero {
     background: url('sekolah.jpg') no-repeat center center/cover;
     min-height: 400px;
@@ -85,21 +94,28 @@ nav a {
     text-align: center;
 }
 
-/* --- 4. KODE KHUSUS HP (Hanya aktif di HP/Layar Kecil) --- */
+/* --- 5. KODE KHUSUS HP (WAJIB DI PALING BAWAH) --- */
 @media (max-width: 768px) {
+    /* Header jadi atas-bawah */
     .header-flex {
-        flex-direction: column; /* Menumpuk ke bawah di HP agar tidak nabrak */
-        padding: 10px;
-        gap: 10px;
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
     }
 
-    .logo-area {
-        flex-direction: row;
-        justify-content: center;
+    /* Visi Misi jadi atas-bawah */
+    .visi-misi-flex, .guru-flex, .footer-flex {
+        flex-direction: column; 
+        gap: 20px;
+    }
+
+    /* Kartu jadi lebar penuh */
+    .card {
+        width: 100%;
     }
 
     .logo-img {
-        height: 45px; /* Sedikit dikecilkan agar pas di HP */
+        height: 45px;
     }
 
     .brand h1 {

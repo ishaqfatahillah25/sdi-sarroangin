@@ -77,8 +77,10 @@ nav a {
     background-color: #f9f9f9;
 }
 
+/* Desktop: Menyamping */
 .grid-container {
     display: flex;
+    flex-direction: row; 
     gap: 20px;
     justify-content: center;
 }
@@ -88,7 +90,7 @@ nav a {
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0,0,0,0.05);
-    flex: 1;
+    flex: 1; /* Biar besar kotak sama rata di laptop */
     text-align: center;
 }
 
@@ -130,6 +132,7 @@ footer {
     .header-flex {
         flex-direction: column;
         gap: 15px;
+        text-align: center;
     }
 
     /* Visi-Misi & Pengajar Jadi Atas-Bawah */
@@ -156,9 +159,6 @@ footer {
     }
 
     nav a {
-        font-size: 0.75rem;
-        background: #f1f1f1;
-        padding: 6px 10px;
-        border-radius: 5px;
+        font-size: 0.8rem;
     }
-}
+} /* <--- Ini kurung penutup yang tadi hilang */

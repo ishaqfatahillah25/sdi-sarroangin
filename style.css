@@ -36,7 +36,7 @@ header {
 
 .header-flex {
     display: flex;
-    justify-content: space-between; 
+    justify-content: space-between;
     align-items: center;
 }
 
@@ -62,20 +62,42 @@ nav a {
     font-weight: 600;
 }
 
-/* --- 3. KONTEN (Visi Misi, Foto, Footer) --- */
-/* Pastikan class ini sesuai dengan yang ada di HTML kamu */
-.visi-misi-flex, .guru-flex, .footer-flex {
-    display: flex;
-    justify-content: space-between;
-    gap: 20px;
-    margin-bottom: 40px;
+/* --- 3. KONTEN (Visi Misi & Pengajar) --- */
+.content-section {
+    padding: 50px 0;
 }
 
-.card {
-    flex: 1;
+.section-title {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 1.8rem;
+}
+
+.bg-light {
+    background-color: #f9f9f9;
+}
+
+.grid-container {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+.card, .card-teacher {
+    background: #fff;
     padding: 20px;
-    background: #f9f9f9;
-    border-radius: 8px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    flex: 1;
+    text-align: center;
+}
+
+.card-teacher img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin: 0 auto 15px;
 }
 
 /* --- 4. HERO SECTION --- */
@@ -94,23 +116,28 @@ nav a {
     text-align: center;
 }
 
-/* --- 5. KODE KHUSUS HP (WAJIB DI PALING BAWAH) --- */
+/* --- 5. FOOTER --- */
+footer {
+    background: #2c3e50;
+    color: white;
+    padding: 40px 0;
+    text-align: center;
+}
+
+/* --- 6. KODE KHUSUS HP (WAJIB DI PALING BAWAH) --- */
 @media (max-width: 768px) {
-    /* Header jadi atas-bawah */
+    /* Header Jadi Atas-Bawah */
     .header-flex {
         flex-direction: column;
         gap: 15px;
-        text-align: center;
     }
 
-    /* Visi Misi jadi atas-bawah */
-    .visi-misi-flex, .guru-flex, .footer-flex {
-        flex-direction: column; 
-        gap: 20px;
+    /* Visi-Misi & Pengajar Jadi Atas-Bawah */
+    .grid-container {
+        flex-direction: column;
     }
 
-    /* Kartu jadi lebar penuh */
-    .card {
+    .card, .card-teacher {
         width: 100%;
     }
 
@@ -129,7 +156,7 @@ nav a {
     }
 
     nav a {
-        font-size: 0.8rem;
+        font-size: 0.75rem;
         background: #f1f1f1;
         padding: 6px 10px;
         border-radius: 5px;

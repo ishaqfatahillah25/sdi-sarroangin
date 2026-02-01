@@ -26,169 +26,48 @@ header {
     z-index: 1000;
     box-shadow: 0 2px 10px rgba(0,0,0,0.1);
 }
-/* Perbaikan Header untuk Tampilan HP */
+/* Perbaikan Header agar tetap menyamping tapi proporsional */
 @media (max-width: 768px) {
     .header-flex {
-        flex-direction: column; /* Susun logo dan menu ke atas-bawah */
-        text-align: center;
-        gap: 10px;
+        display: flex;
+        flex-direction: column; /* Tetap susun kelompok Logo vs kelompok Menu */
+        align-items: center;
+        padding: 10px;
     }
 
     .logo-area {
-        flex-direction: column; /* Logo di atas, Nama Sekolah di bawahnya */
-        gap: 5px;
+        display: flex;
+        flex-direction: row; /* Logo & Tulisan tetep menyamping */
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 15px;
     }
 
     .logo-img {
-        height: 50px; /* Perkecil logo sedikit di HP */
+        height: 40px; /* Perkecil logo agar hemat ruang */
     }
 
     .brand h1 {
-        font-size: 1rem; /* Perkecil tulisan nama sekolah */
+        font-size: 0.9rem; /* Ukuran teks lebih pas di HP */
     }
 
     nav ul {
-        padding: 0;
         display: flex;
+        flex-direction: row; /* Menu tetap menyamping */
         justify-content: center;
-        flex-wrap: wrap; /* Agar menu bisa pindah ke baris baru jika tidak cukup */
+        flex-wrap: wrap; /* Jika tidak cukup, dia akan turun otomatis */
         gap: 10px;
+        padding: 0;
     }
 
     nav ul li {
         margin: 0;
-        font-size: 0.8rem; /* Perkecil ukuran teks menu */
     }
-}
 
-.header-flex {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.logo-area {
-    display: flex;
-    align-items: center;
-    gap: 15px;
-}
-
-.logo-img {
-    height: 60px;
-}
-
-.brand h1 {
-    font-size: 1.2rem;
-    color: #2c3e50;
-    line-height: 1;
-}
-
-.brand span {
-    font-size: 0.8rem;
-    color: #7f8c8d;
-}
-
-nav ul li {
-    display: inline;
-    margin-left: 20px;
-}
-
-nav a {
-    text-decoration: none;
-    color: #2c3e50;
-    font-weight: 600;
-    transition: 0.3s;
-}
-
-nav a:hover {
-    color: #3498db;
-}
-
-/* Hero Section */
-.hero {
-    background: url('sekolah.jpg') no-repeat center center/cover;
-    min-height: 450px;
-    display: flex;
-    align-items: center;
-}
-
-.hero-overlay {
-    background: rgba(44, 62, 80, 0.7); /* Biru gelap transparan */
-    width: 100%;
-    padding: 100px 0;
-    text-align: center;
-    color: #fff;
-}
-
-.hero h2 {
-    font-size: 3rem;
-    letter-spacing: 2px;
-}
-
-.tagline {
-    font-size: 1.5rem;
-    color: #f1c40f; /* Kuning emas */
-    margin: 10px 0;
-}
-
-/* Sections */
-.content-section {
-    padding: 80px 0;
-}
-
-.bg-light {
-    background: #f9f9f9;
-}
-
-.section-title {
-    text-align: center;
-    font-size: 2rem;
-    margin-bottom: 40px;
-    position: relative;
-}
-
-.section-title::after {
-    content: '';
-    width: 50px;
-    height: 4px;
-    background: #3498db;
-    position: absolute;
-    bottom: -10px;
-    left: 50%;
-    transform: translateX(-50%);
-}
-
-.grid-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 30px;
-}
-
-.card, .card-teacher {
-    background: #fff;
-    padding: 30px;
-    border-radius: 10px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-}
-
-.card-teacher {
-    text-align: center;
-}
-
-.card-teacher img {
-    width: 120px;
-    height: 120px;
-    border-radius: 50%;
-    object-fit: cover;
-    margin-bottom: 15px;
-    border: 4px solid #3498db;
-}
-
-/* Footer */
-footer {
-    background: #2c3e50;
-    color: #fff;
-    padding: 50px 0;
-    text-align: center;
-
+    nav a {
+        font-size: 0.75rem; /* Ukuran teks menu diperkecil */
+        background: #f1f1f1; /* Kotak kecil untuk tiap menu agar mudah diklik */
+        padding: 5px 10px;
+        border-radius: 5px;
+    }
 }

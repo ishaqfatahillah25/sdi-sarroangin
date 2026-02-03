@@ -228,6 +228,23 @@ footer {
     transition: all 0.3s ease;
 }
 
+.whatsapp-btn {
+    position: fixed;
+    bottom: 30px; /* Jarak dari bawah */
+    right: 30px;  /* Jarak dari kanan */
+    background-color: #25d366;
+    color: white !important; /* Paksa warna putih */
+    padding: 12px 25px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 600;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+    z-index: 999999; /* Angka sangat besar agar selalu di depan elemen lain */
+    display: inline-flex;
+    align-items: center;
+    transition: all 0.3s ease;
+}
+
 .whatsapp-btn:hover {
     background-color: #128c7e;
     transform: translateY(-5px); /* Efek melompat sedikit saat didekati mouse */

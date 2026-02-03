@@ -213,16 +213,24 @@ footer {
 } /* <--- Ini kurung penutup yang tadi hilang */
 .whatsapp-btn {
     position: fixed;
-    bottom: 20px;
-    right: 20px;
+    bottom: 30px; /* Jarak dari bawah */
+    right: 30px;  /* Jarak dari kanan */
     background-color: #25d366;
-    color: white;
-    padding: 10px 20px;
+    color: white !important; /* Paksa warna putih */
+    padding: 12px 25px;
     border-radius: 50px;
     text-decoration: none;
-    font-weight: bold;
-    box-shadow: 2px 2px 10px rgba(0,0,0,0.2);
-    z-index: 1000;
+    font-weight: 600;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+    z-index: 999999; /* Angka sangat besar agar selalu di depan elemen lain */
+    display: inline-flex;
+    align-items: center;
+    transition: all 0.3s ease;
+}
+
+.whatsapp-btn:hover {
+    background-color: #128c7e;
+    transform: translateY(-5px); /* Efek melompat sedikit saat didekati mouse */
 }
 
 
